@@ -175,6 +175,8 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AirPort.cs" />
+    <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Destination.cs" />
     <Compile Include="Models\Flight.cs" />
