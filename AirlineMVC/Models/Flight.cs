@@ -2,7 +2,7 @@ using System;
 namespace AirlineMVC.Models 
 {
     /// <summary>
-    /// Name?
+    /// Jonathan
     /// </summary>
     public class Flight
     {
@@ -26,11 +26,11 @@ namespace AirlineMVC.Models
 
         public virtual Airport ArrivalAirport { get; set; }
 
-        //public virtual Ticket ticket { get; set; }
+        public virtual Ticket ticket { get; set; }
 
         //public virtual Seat Seat { get; set; }
 
-        //public virtual Destination Destination { get; set; }
+        public virtual Destination Destination { get; set; }
 
 
         public TimeSpan FlightDuration ()
@@ -44,7 +44,10 @@ namespace AirlineMVC.Models
     { 
         BA,
         AmericanAirlines,
+        QatarAirways,
+        AirAsia,
         RyanAir,
+        Emirates,
         Quantas,
         AirFrance
     }

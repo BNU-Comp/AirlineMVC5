@@ -16,10 +16,10 @@ namespace AirlineMVC.Models
         // e.g. London
         public string NearestCity { get; set; }
         // e.g. GBR
-        public Countries Country { get; set; }
+        public CountryCodes CountryCode { get; set; }
     }
 
-    public enum Countries 
+    public enum CountryCodes 
     { 
         GBR,
         USA,

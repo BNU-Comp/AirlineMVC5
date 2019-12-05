@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace AirlineMVC.Models
 {
     /// <summary>
-    /// Name ?
+    /// 
     /// </summary>
     public class Customer
     {
@@ -18,9 +18,11 @@ namespace AirlineMVC.Models
 
         public String TelephoneNo { get; set; }
 
+        public int AddressID { get; set; }
+
         // Navigation Properties
 
-        public virtual ICollection<Ticket> Tickets { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
 
         public virtual Address Address { get; set; }
     }

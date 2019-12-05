@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AirlineMVC.Models
 {
@@ -9,13 +10,17 @@ namespace AirlineMVC.Models
     {
         public int DestinationID { get; set; }
 
+        [Required, StringLength(20)]
         public String Name { get; set; }
 
-        public String Country { get; set; }
+
+        public CountryCodes Country { get; set; }
+
 
         // Navigation Properties
 
-        public virtual Flight Flight { get; set; }
 
     }
+
+
 }
