@@ -24,6 +24,12 @@ namespace AirlineMVC.Models
         GBR,
         USA,
         ITA,
-        FRA
+        FRA,
+        COL,
+        DRC,
+        POL,
+        GER,
+        BEL,
+        SFA
     }
 }

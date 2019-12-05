@@ -45,6 +45,7 @@ namespace AirlineMVC.Models
         BA,
         AmericanAirlines,
         RyanAir,
-        Quantas
+        Quantas,
+        AirFrance
     }
 }
