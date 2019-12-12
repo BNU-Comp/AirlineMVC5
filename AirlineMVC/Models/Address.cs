@@ -15,7 +15,7 @@ namespace AirlineMVC.Models
         public String HouseNumber { get; set; }
         // e.g. Warren Street 
         public String Street { get; set; }
-        //e.g. Wellingborough 
+        //e.g. Wellingborough
         public String Town { get; set; }
         //e.g. Suffolk 
         public Counties County { get; set; }
