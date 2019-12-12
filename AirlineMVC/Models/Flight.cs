@@ -32,7 +32,6 @@ namespace AirlineMVC.Models
 
         public virtual Destination Destination { get; set; }
 
-
         public TimeSpan FlightDuration ()
         {
             return ArrivalDateTime.Subtract(DepartureDateTime);
