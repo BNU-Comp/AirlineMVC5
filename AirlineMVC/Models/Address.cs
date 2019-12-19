@@ -13,18 +13,22 @@ namespace AirlineMVC.Models
 
         [DisplayName, Required]
         public String HouseNumber { get; set; }
+
         // e.g. Warren Street 
         public String Street { get; set; }
+
         //e.g. Wellingborough
         public String Town { get; set; }
+
         //e.g. Suffolk 
         public Counties County { get; set; }
+
         //e.g. LL99 9LL
         public String PostCode { get; set; }
 
         // Navigation Properties
 
-        public virtual Customer Customer { get; set; }
+        //public virtual Customer Customer { get; set; }
 
     }
 

@@ -13,13 +13,13 @@ namespace AirlineMVC.Models
         [Required, StringLength(20)]
         public String Name { get; set; }
 
-        public CountryCodes Country { get; set; }
+        //public CountryCodes Country { get; set; }
 
-        public Countries2 International { get; set; }
+        public Countries Country { get; set; }
 
         // Navigation Properties
 
-        public enum Countries2
+        public enum Countries
         {
             Afghanistan,
             Albania,
