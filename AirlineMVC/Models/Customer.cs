@@ -15,11 +15,11 @@ namespace AirlineMVC.Models
         //e.g. Jacob
         [Required, StringLength(20), DisplayName("First Name")]
         public String FirstName { get; set; }
+
         //e.g. Gardiner-Smith
-
         public String LastName { get; set; }
-        //e.g. jacobgsmith@visual.com
 
+        //e.g. jacobgsmith@visual.com
         [DataType(DataType.EmailAddress)]
         public String EmailAddress { get; set; }
         
