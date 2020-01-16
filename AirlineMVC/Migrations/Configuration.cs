@@ -17,8 +17,8 @@ namespace AirlineMVC.Migrations
 
         protected override void Seed(ApplicationDbContext context)
         {
-            //SeedAddresses(context);
-            //SeedCustomers(context);
+            SeedAddresses(context);
+            SeedCustomers(context);
         }
 
         private void SeedAddresses(ApplicationDbContext context)
