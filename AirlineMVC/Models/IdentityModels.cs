@@ -30,8 +30,10 @@ namespace AirlineMVC.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<AirlineMVC.Models.Address> Addresses { get; set; }
+        public System.Data.Entity.DbSet<Address> Addresses { get; set; }
 
-        public System.Data.Entity.DbSet<AirlineMVC.Models.Customer> Customers { get; set; }
+        public System.Data.Entity.DbSet<Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<Airport> Airports { get; set; }
     }
 }

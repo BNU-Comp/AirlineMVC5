@@ -7,7 +7,6 @@ namespace AirlineMVC.Models
 {
     public class Airport
     {
-
         // 3 Letter code such as LGW and FCO
         public string AirportID { get; set; }
 

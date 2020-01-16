@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace AirlineMVC.Models
 {
     /// <summary>
-    /// 
+    /// jonathan 
     /// </summary>
     public class Customer
     {

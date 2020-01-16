@@ -8,8 +8,9 @@ using System.Web;
 using System.Web.Mvc;
 using AirlineMVC.Models;
 
-namespace CoreMVCTest2.Controllers
+namespace AirlineMVC.Controllers
 {
+    [Authorize(Roles = "Staff")]
     public class AddressesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

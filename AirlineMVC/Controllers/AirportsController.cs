@@ -10,113 +10,107 @@ using AirlineMVC.Models;
 
 namespace AirlineMVC.Controllers
 {
-    [Authorize(Roles ="Staff")]
-    public class CustomersController : Controller
+    public class AirportsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Customers
+        // GET: Airports
         public ActionResult Index()
         {
-            var customers = db.Customers.Include(c => c.Address);
-            return View(customers.ToList());
+            return View(db.Airports.ToList());
         }
 
-        // GET: Customers/Details/5
-        public ActionResult Details(int? id)
+        // GET: Airports/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Airport airport = db.Airports.Find(id);
+            if (airport == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(airport);
         }
 
-        // GET: Customers/Create
+        // GET: Airports/Create
         public ActionResult Create()
         {
-            ViewBag.AddressID = new SelectList(db.Addresses, "AddressID", "HouseNumber");
             return View();
         }
 
-        // POST: Customers/Create
+        // POST: Airports/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,EmailAddress,TelephoneNo,AddressID")] Customer customer)
+        public ActionResult Create([Bind(Include = "AirportID,AirportName,NearestCity,CountryCode")] Airport airport)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
+                db.Airports.Add(airport);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AddressID = new SelectList(db.Addresses, "AddressID", "HouseNumber", customer.AddressID);
-            return View(customer);
+            return View(airport);
         }
 
-        // GET: Customers/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Airports/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Airport airport = db.Airports.Find(id);
+            if (airport == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AddressID = new SelectList(db.Addresses, "AddressID", "HouseNumber", customer.AddressID);
-            return View(customer);
+            return View(airport);
         }
 
-        // POST: Customers/Edit/5
+        // POST: Airports/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,EmailAddress,TelephoneNo,AddressID")] Customer customer)
+        public ActionResult Edit([Bind(Include = "AirportID,AirportName,NearestCity,CountryCode")] Airport airport)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(customer).State = EntityState.Modified;
+                db.Entry(airport).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AddressID = new SelectList(db.Addresses, "AddressID", "HouseNumber", customer.AddressID);
-            return View(customer);
+            return View(airport);
         }
 
-        // GET: Customers/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: Airports/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Airport airport = db.Airports.Find(id);
+            if (airport == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(airport);
         }
 
-        // POST: Customers/Delete/5
+        // POST: Airports/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            Customer customer = db.Customers.Find(id);
-            db.Customers.Remove(customer);
+            Airport airport = db.Airports.Find(id);
+            db.Airports.Remove(airport);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
