@@ -1,0 +1,111 @@
+﻿@model AirlineMVC.Models.Customer
+
+@{
+    ViewBag.Title = "MyAccount";
+}
+
+<h2>MyAccount</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.HouseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.HouseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelephoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelephoneNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<h2>Address Details</h2>
+
+<div>
+    <h4>Address</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.HouseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.HouseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.Street)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.Town)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.Town)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address.PostCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address.PostCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AddressID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

@@ -200,6 +200,7 @@
     <Compile Include="Models\Flight.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MyAccount.cs" />
     <Compile Include="Models\Seat.cs" />
     <Compile Include="Models\Ticket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -281,6 +282,7 @@
     <Content Include="Views\Airports\Index.cshtml" />
     <Content Include="Views\Shared\Info.cshtml" />
     <Content Include="Views\View.cshtml" />
+    <Content Include="Views\Home\MyAccount.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
