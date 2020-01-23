@@ -10,7 +10,7 @@ using AirlineMVC.Models;
 
 namespace AirlineMVC.Controllers
 {
-    [Authorize(Roles = "Staff")]
+    //[Authorize(Roles = "Staff")]
     public class AddressesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

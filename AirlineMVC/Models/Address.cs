@@ -26,10 +26,10 @@ namespace AirlineMVC.Models
         //e.g. LL99 9LL
         public String PostCode { get; set; }
 
-        public Nullable<int> CustomerID { get; set; }
+        //public Nullable<int> CustomerID { get; set; }
         // Navigation Properties
 
-        public virtual Customer Customer { get; set; }
+        //public virtual Customer Customer { get; set; }
 
     }
 

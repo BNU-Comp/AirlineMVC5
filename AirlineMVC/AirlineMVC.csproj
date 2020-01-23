@@ -184,6 +184,10 @@
     <Compile Include="Migrations\202001161041418_AddAirport.Designer.cs">
       <DependentUpon>202001161041418_AddAirport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001231140185_RemoveFKCustomerID.cs" />
+    <Compile Include="Migrations\202001231140185_RemoveFKCustomerID.Designer.cs">
+      <DependentUpon>202001231140185_RemoveFKCustomerID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -191,6 +195,7 @@
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Countries.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DbInitiser.cs" />
     <Compile Include="Models\Destination.cs" />
     <Compile Include="Models\Flight.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -274,6 +279,8 @@
     <Content Include="Views\Airports\Details.cshtml" />
     <Content Include="Views\Airports\Edit.cshtml" />
     <Content Include="Views\Airports\Index.cshtml" />
+    <Content Include="Views\Shared\Info.cshtml" />
+    <Content Include="Views\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -298,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001161041418_AddAirport.resx">
       <DependentUpon>202001161041418_AddAirport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001231140185_RemoveFKCustomerID.resx">
+      <DependentUpon>202001231140185_RemoveFKCustomerID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

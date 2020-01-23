@@ -33,7 +33,7 @@ namespace AirlineMVC.Migrations
                     Town = "Broadfield",
                     County = Counties.Bedfordshire,
                     PostCode = "BO5 1EH",
-                    CustomerID = 1,
+                    //CustomerID = 1,
                 },
                 new Address
                 {
@@ -43,7 +43,7 @@ namespace AirlineMVC.Migrations
                     Town = "Rosendale",
                     County = Counties.Sussex,
                     PostCode = "RH10 5NH",
-                    CustomerID = 2,
+                    //CustomerID = 2,
                 },
                 new Address
                 {
@@ -53,7 +53,7 @@ namespace AirlineMVC.Migrations
                     Town = "North Ham",
                     County = Counties.Wiltshire,
                     PostCode = "RH11 7HM",
-                    CustomerID = 3,
+                    //CustomerID = 3,
                 },
                 new Address
                 {
@@ -63,7 +63,7 @@ namespace AirlineMVC.Migrations
                     Town = "Lockley Heath",
                     County = Counties.Essex,
                     PostCode = "BO2 8SE",
-                    CustomerID = 4,
+                    //CustomerID = 4,
                 },                
                 new Address
                 {
@@ -73,7 +73,7 @@ namespace AirlineMVC.Migrations
                     Town = "New Dudley Oak",
                     County = Counties.Shropshire,
                     PostCode = "ST17 7SW",
-                    CustomerID = 5,
+                    //CustomerID = 5,
                 },
                 new Address
                 {
@@ -83,7 +83,7 @@ namespace AirlineMVC.Migrations
                     Town = "Hafford Town",
                     County = Counties.Staffordshire,
                     PostCode = "BF22 6AR",
-                    CustomerID = 6,
+                    //CustomerID = 6,
                 },                
                 new Address
                 {
@@ -93,7 +93,7 @@ namespace AirlineMVC.Migrations
                     Town = "Barrow Green",
                     County = Counties.Cumbria,
                     PostCode = "BF22 3PO",
-                    CustomerID = 7,
+                    //CustomerID = 7,
                 },
                 new Address
                 {
@@ -103,7 +103,7 @@ namespace AirlineMVC.Migrations
                     Town = "Cotteridge End",
                     County = Counties.Bedfordshire,
                     PostCode = "MK31 4LI",
-                    CustomerID = 8,
+                    //CustomerID = 8,
                 },                
                 new Address
                 {
@@ -113,7 +113,7 @@ namespace AirlineMVC.Migrations
                     Town = "Helstree Vale",
                     County = Counties.Middlesex,
                     PostCode = "BO3 3NU",
-                    CustomerID = 9,
+                    //CustomerID = 9,
                 },
                 new Address
                 {
@@ -123,9 +123,12 @@ namespace AirlineMVC.Migrations
                     Town = "Kidsgrove",
                     County = Counties.Buckinghamshire,
                     PostCode = "HP25 5DF",
-                    CustomerID = 10,
+                    //CustomerID = 10,
                 }
             };
+
+            addresses.ForEach(s => context.Addresses.Add(s));
+            context.SaveChanges();
         }
 
         private void SeedCustomers(ApplicationDbContext context)
