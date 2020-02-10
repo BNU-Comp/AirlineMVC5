@@ -15,6 +15,7 @@ namespace AirlineMVC.Models
 
         public int NoInfants { get; set; }
 
+        // e.g. Economy
         public FlightTypes Type { get; set; }
 
         public DateTime DateBooked { get; set; }
