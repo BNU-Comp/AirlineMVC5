@@ -9,8 +9,10 @@ namespace AirlineMVC.Models
     {
         public int BookingID { get; set; }
 
+        // e.g. 2 Adults
         public int NoAdults { get; set; }
 
+        // e.g. 1 Child
         public int NoChildren { get; set; }
 
         public int NoInfants { get; set; }
@@ -18,6 +20,7 @@ namespace AirlineMVC.Models
         // e.g. Economy
         public FlightTypes Type { get; set; }
 
+        // e.g. 10/01/2019
         public DateTime DateBooked { get; set; }
 
         public decimal TotalCost { get; set; }
